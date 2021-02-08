@@ -10,7 +10,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
 * [Checkout](#Checkout)
 
-* [Add and Remove](#Add and Remove)
+* [Add and Remove](#Add-and-Remove)
 
 * [Commit](#Commit)
 
@@ -20,7 +20,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
 * [Tag](#Tag)
 
-* [Push and Pull](#Push and Pull)
+* [Push and Pull](#Push-and-Pull)
 
 ## Init
 * Init git in specified folder
@@ -39,11 +39,12 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
   `git log` 
   
- ##Config
- All below commands affect globally on all projects, If you want use them for current project do not use `--global` switch
- * Show your local user config
+## Config
  
-    `git config --global --list`
+ All below commands affect globally on all projects, If you want use them for current project do not use `--global` switch
+ * Showing system, global, and (if inside a repository) local configs
+
+    `git config --list`
 
 * Change your user name globally
     
@@ -57,7 +58,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
     
     `git config --get remote.origin.url `
     
- ##Branch
+ ## Branch
 * Show branches (current branch marked with *)
 
     `git branch `
@@ -82,7 +83,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git remote show origin`
 
-##Checkout
+## Checkout
 * Reset a file to the latest committed file version
     
     `git checkout -- <file_name> `
@@ -95,7 +96,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git checkout -b <branch_name>`
        
-##Add and Remove
+## Add and Remove
 * Add current directory changes, untracked files and etc to local
 
     `git add . ` 
@@ -108,7 +109,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
     
     `git rm file`
     
-##Commit
+## Commit
 * commit whatever you added
  
     `git commit -m "message"`
@@ -121,7 +122,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
     
     `git commit --amend -m "new message"`
     
-##Reset
+## Reset
 * Clean file or directory form add
 
     `git reset HEAD -- <directory_nName> or <file_name>`
@@ -138,7 +139,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git reset HEAD^ `
     
-##Diff
+## Diff
 * See latest changes was created, `HEAD` is a pointer to the most recent commit.
 
     `git diff HEAD `
@@ -151,7 +152,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git diff-tree -no--committed-id --name-only -r commit-id`
    
-##Tag
+## Tag
 * List all tags
 
     `git tag`
@@ -176,7 +177,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git tag --delete <tag_annotation>`
     
-##Push and Pull
+## Push and Pull
 * push form local branch to remote one
 
     `git push origin(remote branch name) develop(local branch name)`
