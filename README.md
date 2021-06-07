@@ -118,12 +118,12 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     ` git commit -m "message" file1 file2 `
     
-* Update latest commit messages
+* Update latest commit messages. It lets you combine staged changes with the previous commit instead of creating an entirely new commit. 
     
     `git commit --amend -m "new message"`
     
 ## Reset
-* Clean file or directory form add
+* Clean file or directory from add
 
     `git reset HEAD -- <directory_nName> or <file_name>`
 
@@ -178,7 +178,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
     `git tag --delete <tag_annotation>`
     
 ## Push and Pull
-* push form local branch to remote one
+* push from local branch to remote one
 
     `git push origin(remote branch name) develop(local branch name)`
 
