@@ -67,9 +67,13 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git branch <branch_name> `
 
-* Delete a branch
+* Delete a branch locally
 
     `git branch -d <branch_name> `
+
+* Delete a remote branch
+
+    `git push origin --delete <branch_name> `
 
 * List all remote branch
     
