@@ -88,6 +88,10 @@ Git useful commands which I have ever used. Please add, update or delete what ev
     `git remote show origin`
 
 ## Checkout
+* Fetch the remote branches
+
+   `git fetch origin`
+   
 * Reset a file to the latest committed file version
     
     `git checkout -- <file_name> `
