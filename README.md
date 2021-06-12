@@ -14,6 +14,8 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
 * [Commit](#Commit)
 
+* [Stash](#Stash)
+
 * [Reset](#Reset)
 
 * [Diff](#Diff)
@@ -83,7 +85,19 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git show-branch`
 
-* See remote url and branches of project.
+* List all changes in a commit
+
+    `git show [below_switches] <commit_id>`
+
+    - The `--no-commit-id` suppresses the commit ID output
+
+    - The `--pretty` argument specifies an empty format string to avoid the cruft at the beginning.
+
+    - The `--name-only` argument shows only the file names that were affected (Thanks Hank). Use --name-status instead, if you want to see what happened to each file (Deleted, Modified, Added)
+
+    - The `-r` argument is to recurse into sub-trees
+
+* See remote url and branches of project
 
     `git remote show origin`
 
@@ -105,7 +119,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
     `git checkout -b <branch_name>`
        
 ## Add and Remove
-* Add current directory changes, untracked files and etc to local
+* Add current directory changes, untraced files and etc to local
 
     `git add . ` 
 
@@ -129,7 +143,26 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 * Update latest commit messages. It lets you combine staged changes with the previous commit instead of creating an entirely new commit. 
     
     `git commit --amend -m "new message"`
+
+## Stash
+Often, when you’ve been working on part of your project, things are in a messy state and you want to switch branches for a bit to work on something else. The problem is, you don’t want to do a commit of half-done work just so you can get back to this point later. The answer to this issue is the git stash command.
+
+* To push a new stash onto your stack
     
+    `git stash` or `git stash push`
+
+* To see list of you stashes
+
+    `git stash list`
+
+* To apply the last stash
+
+    `git stash apply`
+
+* To apply a stash with it's id(You can see stash ids by list them, it is like stash@{1})
+
+    `git stash apply <stash_id>`
+
 ## Reset
 * Clean file or directory from add
 
