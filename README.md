@@ -101,6 +101,12 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git remote show origin`
 
+* Move existing, uncommitted work to a new branch (git version> 2.23)
+
+    `git --version`
+    
+    `git switch -c <new-branch>`
+
 ## Checkout
 * Fetch the remote branches
 
