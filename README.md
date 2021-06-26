@@ -1,5 +1,5 @@
 # Git Useful Commands
-Git useful commands which I have ever used. Please add, update or delete what ever you want, and help to improve it.
+Git useful commands which I have ever used. Please add, update or delete what ever you want, and help to improve it :punch:.
 
 ## Table of content
 * [Init](#Init)
