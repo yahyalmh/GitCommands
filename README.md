@@ -24,6 +24,8 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
 * [Push and Pull](#Push-and-Pull)
 
+* [SSH Key](#SSH-Key)
+
 ## Init
 * Init git in specified folder
 
@@ -31,11 +33,11 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
 * Get a project from a url
 
-  `git clone url`
+  `git clone <url>`
 
 * Connect local project to a remote url
 
-  `git remote add origin ulr`
+  `git remote add origin <ulr>`
 
 * Get all commits log
 
@@ -101,7 +103,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 
     `git remote show origin`
 
-* Move existing, uncommitted work to a new branch (git version> 2.23)
+* Move existing, uncommitted work to a new branch (git version > 2.23)
 
     `git --version`
     
@@ -236,6 +238,23 @@ Often, when you’ve been working on part of your project, things are in a messy
 * Merge a branch with current branch
     
     `git merge <branch_name>`
+
+## SSH Key
+To generate and use SSH keys to work with git, clone, pull, push,...
+1. Generating a SSH key pair
+
+    Run the following command and enter file in which to save the key, give absolute path like `/home/user/.ssh/git_key` or accept default, and it will save the key in `/home/user/.ssh` dir. You can see the generated key by `ls ~/.ssh`.
+
+    `ssh-keygen`
+2. If you don't want to type your password each time you use the key, you'll need to add it to the ssh-agent.
+    1. To start the agent, run the following:
+
+        `eval 'ssh-agent'`
+    2. Enter ssh-add followed by the path to the private key file:
+
+        `ssh-add ~/.ssh/<private_key_file>`
+3. Add generated public key, the file with `.pub` extension to your GitHub or GitLab account, and then you can run any command without entering your credential each time. Your validation will be done by SSH key automatically. Notice you can use generated private key on another machine or add another one on that machine.
+
 
 
 
