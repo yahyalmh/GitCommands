@@ -255,6 +255,10 @@ To generate and use SSH keys to work with git, clone, pull, push,...
         `ssh-add ~/.ssh/<private_key_file>`
 3. Add generated public key, the file with `.pub` extension to your GitHub or GitLab account, and then you can run any command without entering your credential each time. Your validation will be done by SSH key automatically. Notice you can use generated private key on another machine or add another one on that machine.
 
+* Notice: If your origin remote is pointing at the HTTPS URL rather than the SSH URL, you have to change it ssh:
+
+    `git remote set-url origin git@github.com:<Username>/<Project>.git`
+
 
 
 
