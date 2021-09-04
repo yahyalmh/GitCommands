@@ -61,6 +61,36 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 * Get remote url
     
     `git config --get remote.origin.url `
+   
+* Change all previous commits' commiter and author emaill address(See `man git-filter-branch` for more info)
+ 
+    ```
+    git filter-branch -f --env-filter 
+                  'if test "$GIT_AUTHOR_EMAIL" = "<old_email_address@gmail.com>"
+                   then
+                           GIT_AUTHOR_EMAIL=<new_email_address@gmail.com>
+                   fi
+                   if test "$GIT_COMMITTER_EMAIL" = "<old_email_address@gmail.com>
+                   then
+                           GIT_COMMITTER_EMAIL=<new_email_address@gmail.com>
+                   fi'
+                   -- --all
+    ```
+           
+ * Change all previous commits' commiter and author name(See `man git-filter-branch` for more info)
+ 
+    ```
+    git filter-branch -f --env-filter
+                   'if test "$GIT_AUTHOR_NAME" = "<old_author_name>"
+                   then
+                           GIT_AUTHOR_NAME=<new_author_name>
+                   fi
+                   if test "$GIT_COMMITTER_NAME" = "<old_committer_name>"
+                   then
+                           GIT_COMMITTER_NAME=<new_committer_name>
+                   fi'
+                   -- --all
+   ```
     
  ## Branch
 * Show branches (current branch marked with *)
