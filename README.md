@@ -181,6 +181,7 @@ Git useful commands which I have ever used. Please add, update or delete what ev
 * Update latest commit messages. It lets you combine staged changes with the previous commit instead of creating an entirely new commit. 
     
     `git commit --amend -m "new message"`
+    - if you do not want to change the commit message use `--no-edit` instead of new message"
 
 ## Stash
 Often, when you’ve been working on part of your project, things are in a messy state and you want to switch branches for a bit to work on something else. The problem is, you don’t want to do a commit of half-done work just so you can get back to this point later. The answer to this issue is the git stash command.
