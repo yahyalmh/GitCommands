@@ -265,6 +265,12 @@ Often, when you’ve been working on part of your project, things are in a messy
 * Pull request
 
     `git pull origin <current_branch_name> `
+    
+     * Default pull strategy is merge, if you want to `rebase`, you can use one of these commands:
+
+        `git pull --rebase`
+
+        `git rebase`
 
 * Merge a branch with current branch
     
